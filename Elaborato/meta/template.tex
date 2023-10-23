@@ -1,0 +1,55 @@
+% Packages
+\usepackage{fancyhdr}
+
+% Commands
+\newcommand{\indice}{
+  \thispagestyle{empty}
+  \clearpage
+  \newpage
+  \thispagestyle{empty}
+  \clearpage
+  \tableofcontents
+  \thispagestyle{empty}
+  \clearpage
+  \setcounter{page}{1}
+}
+
+\newcommand{\nomecapitolo}{}
+
+\newcommand{\nuovocapitolo}[1]{
+  \newpage
+  \renewcommand{\nomecapitolo}{#1}
+  \pagestyle{fancy}
+  \fancyhead{}
+  \fancyfoot{}
+  \fancyfoot[R]{\thepage}
+}
+
+\newcommand{\nuovapaginasinistra}{
+  \newpage
+  \pagestyle{fancy}
+  \fancyhead{}
+  \fancyfoot{}
+  \fancyfoot[L]{\thepage}
+  \fancyhead[L]{\nomecapitolo}
+}
+
+\newcommand{\nuovapaginadestra}{
+  \newpage
+  \pagestyle{fancy}
+  \fancyhead{}
+  \fancyfoot{}
+  \fancyfoot[R]{\thepage}
+  \fancyhead[R]{\nomecapitolo}
+}
+
+\newcommand{\spazio}[1]{
+  \newcount\mycount%
+  \mycount=#1
+  \loop
+  \ifnum\mycount>0
+  $$
+  $$
+  \advance\mycount by -1
+  \repeat
+}

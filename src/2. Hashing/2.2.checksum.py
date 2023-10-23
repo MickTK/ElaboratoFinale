@@ -21,12 +21,12 @@ if filename != "" and os.path.exists(filename):
 
   # Lettura del file
   with open(filename,"rb") as file:
-    buf = file.read(BLOCKSIZE)
-    while len(buf) > 0:
+    buffer = file.read(BLOCKSIZE)
+    while len(buffer) > 0:
       # Incorporamento dei blocchi
-      md5.update(buf)
-      sha256.update(buf)
-      buf = file.read(BLOCKSIZE)
+      md5.update(buffer)
+      sha256.update(buffer)
+      buffer = file.read(BLOCKSIZE)
 
   # Digestione
   md5_digest = md5.hexdigest()

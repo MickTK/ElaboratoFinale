@@ -15,18 +15,21 @@ if password != "":
   with open(FILENAME, 'wb') as file:
     file.write(digest.encode())
     print("Password salvata.")
+  # Legge la password cifrata dal file
+  with open(FILENAME, 'rb') as file:
+    digest = file.read()
 
   while True:
     # Chiede all'utente di reinserire la password
     password = input("Reinserire la password: ")
     # Viene eseguita la digestione della password inserita
     hashing = SHA512.new(password.encode())
-    password = hashing.hexdigest()
+    digested_password = hashing.hexdigest()
     # Legge la password cifrata presente sul file
     with open(FILENAME, 'rb') as file:
       digest = file.read().decode()
     # Se la digestione produce lo stesso risultato presente nel file
-    if password == digest:
+    if digested_password == digest:
       # La password inserita corrisponde a quella presente sul file
       print("Password accettata.")
       break

@@ -1,11 +1,12 @@
 #!/bin/bash
 
 file_list=(
-  "src/Capitolo 2/2.1.digested_password.txt"
-  "src/Capitolo 3/3.2.key.pem"
-  "src/Capitolo 3/3.2.message.txt"
-  "src/Capitolo 3/3.3.decripted_image.jpg"
-  "src/Capitolo 3/3.3.encripted_image.jpg"
+  "src/2. Hashing/2.1.digested_password.txt"
+  "src/2. Hashing/2.3.message.txt"
+  "src/5. Cifratura/5.1.key.pem"
+  "src/5. Cifratura/5.1.message.txt"
+  "src/5. Cifratura/5.2.decripted_image.jpg"
+  "src/5. Cifratura/5.2.encripted_image.jpg"
 )
 
 for file in "${file_list[@]}"; do

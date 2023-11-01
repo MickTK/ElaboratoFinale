@@ -3,8 +3,8 @@ import secrets
 import os
 
 # Nomi dei file che contengono la chiave e il messaggio cifrato
-KEY_FILENAME = os.path.dirname(os.path.realpath(__file__)) + "/3.2.key.pem"
-MESSAGE_FILENAME = os.path.dirname(os.path.realpath(__file__)) + "/3.2.message.txt"
+KEY_FILENAME = os.path.dirname(os.path.realpath(__file__)) + "/5.1.key.pem"
+MESSAGE_FILENAME = os.path.dirname(os.path.realpath(__file__)) + "/5.1.message.txt"
 
 # Se non esiste un file con la chiave
 if not os.path.exists(KEY_FILENAME):

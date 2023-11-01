@@ -13,4 +13,10 @@ pandoc \
 "Elaborato/00. Introduzione.md" \
 "Elaborato/01. Ambiente di sviluppo e strumenti.md" \
 "Elaborato/02. Hashing.md" \
-"Elaborato/03. Cifratura simmetrica.md" \
+"Elaborato/03. Random.md" \
+"Elaborato/04. IO.md" \
+"Elaborato/05. Cifratura.md" \
+"Elaborato/06. Chiave pubblica.md" \
+"Elaborato/07. Firma.md" \
+"Elaborato/08. Protocolli.md" \
+"Elaborato/09. Conclusioni.md" \

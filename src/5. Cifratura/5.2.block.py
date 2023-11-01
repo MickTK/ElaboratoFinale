@@ -4,9 +4,9 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 
 # Informazioni sul file da cifrare/decifrare
-FILENAME = os.path.dirname(os.path.realpath(__file__)) + "/3.3.image.jpg"
-ENCRIPTED_FILENAME = os.path.dirname(os.path.realpath(__file__)) + "/3.3.encripted_image.jpg"
-DECRIPTED_FILENAME = os.path.dirname(os.path.realpath(__file__)) + "/3.3.decripted_image.jpg"
+FILENAME = os.path.dirname(os.path.realpath(__file__)) + "/5.2.image.jpg"
+ENCRIPTED_FILENAME = os.path.dirname(os.path.realpath(__file__)) + "/5.2.encripted_image.jpg"
+DECRIPTED_FILENAME = os.path.dirname(os.path.realpath(__file__)) + "/5.2.decripted_image.jpg"
 
 IV_LENGTH = AES.block_size # Lunghezza vettore iniziale (byte)
 KEY_LENGTH = 16            # Lunghezza chiave (byte) (AES-128 -> 16B)

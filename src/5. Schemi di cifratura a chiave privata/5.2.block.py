@@ -18,7 +18,7 @@ key = secrets.token_bytes(KEY_LENGTH)
 
 # Cifratura file
 def encrypt(file_in, file_out):
-  # Inizializzazione classe crittografica
+  # Inizializzazione cifrario
   cipher = AES.new(key, AES.MODE_CBC, iv)
   # Lettura file da cifrare
   with open(file_in, "rb") as file:
@@ -33,7 +33,7 @@ def encrypt(file_in, file_out):
 
 # Decifratura file
 def decrypt(file_in, file_out):
-  # Inizializzazione classe crittografica
+  # Inizializzazione cifrario
   cipher = AES.new(key, AES.MODE_CBC)
   # Lettura file da decifrare
   with open(file_in, "rb") as file:

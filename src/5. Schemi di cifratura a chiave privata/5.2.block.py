@@ -24,9 +24,9 @@ def encrypt(file_in, file_out):
   with open(file_in, "rb") as file:
     byteblock = file.read()
   # Padding dei dati da cifrare
-  ciphertext = pad(byteblock[RESERVED_BYTES:], AES.block_size)
+  plaintext = pad(byteblock[RESERVED_BYTES:], AES.block_size)
   # Cifratura dati
-  ciphertext = byteblock[:RESERVED_BYTES] + cipher.encrypt(ciphertext)
+  ciphertext = byteblock[:RESERVED_BYTES] + cipher.encrypt(plaintext)
   # Scrittura file con dati cifrati
   with open(file_out, "wb") as file:
     file.write(ciphertext)

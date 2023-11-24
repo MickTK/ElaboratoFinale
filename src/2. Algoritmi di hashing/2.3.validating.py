@@ -1,4 +1,5 @@
-import hmac, os, json
+from Crypto.Hash import HMAC, SHA256
+import os, json
 
 # Nome del file che conterrà il codice di autenticazione del messaggio
 FILENAME = os.path.dirname(os.path.realpath(__file__)) + '/2.3.message.txt'
@@ -15,8 +16,8 @@ op = input()
 if op == '1':
   text_message = input('Messaggio: ') # Messaggio da inoltrare
   # Inizializzazione dell'oggetto HMAC e digestione del messaggio
-  HMAC = hmac.new(SECRET.encode(), text_message.encode(), 'sha256')
-  mac = HMAC.hexdigest()
+  hmac = HMAC.new(SECRET.encode(), text_message.encode(), SHA256)
+  mac = hmac.hexdigest()
   message = { 'text': text_message, 'mac': mac }
   message = json.dumps(message)
   # Salvataggio del messaggio su file
@@ -33,11 +34,12 @@ elif op == '2':
       message = file.read().decode()
       message = json.loads(message)
     # Inizializzazione dell'oggetto HMAC
-    HMAC = hmac.new(SECRET.encode(), message['text'].encode(), 'sha256')
+    hmac = HMAC.new(SECRET.encode(), message['text'].encode(), SHA256)
     # Esegue la verifica del mac
-    if hmac.compare_digest(message['mac'], HMAC.hexdigest()):
+    try:
+      hmac.hexverify(message['mac'])
       print('Il messaggio è autentico.')
-    else:
+    except ValueError:
       print('Il messaggio NON è autentico.')
   # Se il file contenente il messaggio non è presente nella cartella corrente
   else:

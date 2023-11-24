@@ -1,5 +1,5 @@
+from Crypto.Hash import MD5, SHA256
 import os
-import hashlib
 
 # Dimensione dei blocchi da leggere su file
 BLOCKSIZE = 65536
@@ -16,8 +16,8 @@ filename = input("Inserire nome del file: ")
 if filename != "" and os.path.exists(filename):
 
   # Dichiarazione classi di hashing
-  md5 = hashlib.md5()
-  sha256 = hashlib.sha256()
+  md5 = MD5.new()
+  sha256 = SHA256.new()
 
   # Lettura del file
   with open(filename,"rb") as file:

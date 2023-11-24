@@ -43,6 +43,13 @@
   \fancyhead[R]{\nomecapitolo}
 }
 
+\newcommand{\nuovapaginasinistravuota}{
+  \newpage
+  \thispagestyle{empty}
+  \
+  \setcounter{page}{\thepage-1}
+}
+
 \newcommand{\spazio}[1]{
   \newcount\mycount%
   \mycount=#1

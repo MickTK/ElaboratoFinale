@@ -1,5 +1,8 @@
-import os
+# Il seguente script prende in input una password, esegue l'hashing e salva il risultato su file.
+# Successivamente viene chiesto all'utente di reinserire la password, effettuando un confronto dell'hash value con il valore precedentemente salvato su file.
+
 from Crypto.Hash import SHA512
+import os
 
 # Nome del file che contiene la password cifrata
 FILENAME = os.path.dirname(os.path.realpath(__file__)) + "/2.1.digested_password.txt"
@@ -35,4 +38,4 @@ if password != "":
       break
     else:
       # La password inserita non corrisponde a quella presente sul file
-      print("Password rifiutata. La password non corrisponde con quella precedentemente inserita.")
+      print("Password rifiutata. La password non corrisponde quella precedentemente inserita.")

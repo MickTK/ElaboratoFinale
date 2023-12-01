@@ -1,3 +1,5 @@
+# Il seguente script prende in input dall'utente una password e un dato sensibile, andando a cifrare tramite chiave derivata tale dato.
+
 from Crypto.Protocol.KDF import scrypt
 from Crypto.Random import get_random_bytes
 from Crypto.Cipher import AES
@@ -9,10 +11,10 @@ TOKEN_LENGTH = 16
 SCRYPT_PARAMS = (2**14, 8, 1)
 
 # Master key
-password = 'la mia password segreta'.encode()
+password = input('Password: ').encode()
 
 # Dati sensibili da cifrare
-plaintext = '3141-5926-5358-9793'.encode()
+plaintext = input('Messaggio da cifrare: ').encode()
 
 data = {}
 
@@ -38,4 +40,4 @@ cipher = AES.new(secondary_key, AES.MODE_CBC, iv)
 padded_plaintext = pad(plaintext, AES.block_size)
 data["ciphertext"] = salt + iv + cipher.encrypt(padded_plaintext)
 
-print(data)
+print('Data', data)

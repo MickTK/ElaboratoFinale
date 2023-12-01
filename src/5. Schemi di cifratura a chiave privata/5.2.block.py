@@ -1,3 +1,5 @@
+# Il seguente script cifra un file e decifra il file cifrato, ottenendo un'immagine cifrata e due immagini in chiaro (quella originale e quella decifrata).
+
 import os
 import secrets
 from Crypto.Cipher import AES

@@ -1,3 +1,5 @@
+# Il seguente script simula la condivisione di una chiave di sessione tra due utenti. Viene infine stampata a video la chiave ottenuta.
+
 from Crypto.PublicKey import ECC
 from Crypto.Hash import TupleHash128
 from Crypto.Random import get_random_bytes
@@ -38,4 +40,4 @@ session_key = key_agreement(
   kdf=kdf
 )
 
-print(session_key)
+print('Chiave di sessione:', session_key)

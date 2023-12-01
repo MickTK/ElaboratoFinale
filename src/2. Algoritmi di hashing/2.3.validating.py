@@ -1,3 +1,6 @@
+# Il seguente script genera un messaggio con codice mac. Tale messaggio viene salvato su file.
+# Viene successivamente effettuata un'autenticazione del messaggio precedentemente salvato stampando a video i risultati di tale operazione.
+
 from Crypto.Hash import HMAC, SHA256
 import os, json
 

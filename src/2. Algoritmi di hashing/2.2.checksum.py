@@ -1,3 +1,5 @@
+# Il seguente script prende in ingresso il nome di un file. Se il file esiste, restituisce i valori di checksum prodotti, altrimenti stampa a video un messaggio di errore.
+
 from Crypto.Hash import MD5, SHA256
 import os
 

@@ -1,3 +1,5 @@
+# Il seguente script genera delle chiavi di cifratura andando a cifrare un messaggio statico. Viene successivamente mostrato a video il messaggio decifrato.
+
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 from Crypto.Protocol.SecretSharing import Shamir

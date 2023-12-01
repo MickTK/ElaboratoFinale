@@ -24,3 +24,4 @@ pandoc \
 "Elaborato/07. Meccanismi di firma digitale.md" \
 "Elaborato/08. Protocolli di condivisione e funzioni di derivazione chiavi.md" \
 "Elaborato/09. Conclusioni.md" \
+"Elaborato/10. Sitografia.md"

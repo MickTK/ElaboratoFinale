@@ -1,3 +1,5 @@
+# Il seguente script simula un sistema di concessione permessi, permettendo ad un utente di richiedere dei permessi speciali ad un utente amministratore. Quest'ultimo può o meno concedere tali permessi.
+
 from Crypto.PublicKey import ECC
 from Crypto.Signature import DSS
 from Crypto.Hash import SHA256
@@ -31,7 +33,7 @@ class SuperUser:
   # Richiesta permessi da parte di un utente semplice
   def permissions_request(self, user):
     # Messaggio di richiesta permessi
-    print(f'Vuoi concedere i permessi a {user.username}?')
+    print(f'Vuoi concedere i permessi a {user.username}? [Si/No]')
     print(f'Token: {user.operation_token}')
     if input().lower() == 'si':
       password = input('Inserire password amministratore: ')

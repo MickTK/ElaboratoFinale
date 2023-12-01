@@ -1,3 +1,6 @@
+# Il seguente script genera una chiave privata (salvandola su file) e con essa cifra un messaggio testuale (anch'esso salvato su file).
+# In una seconda esecuzione, decifra il messaggio stampando a video il testo originale del messaggio.
+
 from Crypto.Cipher import Salsa20
 import secrets
 import os

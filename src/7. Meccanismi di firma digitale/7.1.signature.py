@@ -1,3 +1,5 @@
+# Il seguente script permette la generazione di una coppia di chiavi (pubblica e privata) per la successiva firma di un documento.
+
 from Crypto.Signature import pss
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA

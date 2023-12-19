@@ -17,11 +17,11 @@ pandoc \
 "Elaborato/00. Copertina.md" \
 "Elaborato/01. Introduzione.md" \
 "Elaborato/02. Algoritmi di hashing.md" \
-"Elaborato/03. Generazione valori casuali.md" \
+"Elaborato/03. Generazione numeri pseudo-casuali.md" \
 "Elaborato/04. Formati di importazione ed esportazione chiavi.md" \
 "Elaborato/05. Schemi di cifratura a chiave privata.md" \
 "Elaborato/06. Schemi di cifratura a chiave pubblica.md" \
-"Elaborato/07. Meccanismi di firma digitale.md" \
+"Elaborato/07. Schemi di firma digitale.md" \
 "Elaborato/08. Protocolli di condivisione e funzioni di derivazione chiavi.md" \
 "Elaborato/09. Conclusioni.md" \
 "Elaborato/10. Sitografia.md"

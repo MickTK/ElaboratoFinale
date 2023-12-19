@@ -10,9 +10,9 @@ file_list=(
   "src/6. Schemi di cifratura a chiave pubblica/6.1.private.pem"
   "src/6. Schemi di cifratura a chiave pubblica/6.1.public.pem"
   "src/6. Schemi di cifratura a chiave pubblica/6.1.encrypted.txt"
-  "src/7. Meccanismi di firma digitale/7.1.public.pem"
-  "src/7. Meccanismi di firma digitale/7.1.private.pem"
-  "src/7. Meccanismi di firma digitale/7.1.signature.p7s"
+  "src/7. Schemi di firma digitale/7.1.public.pem"
+  "src/7. Schemi di firma digitale/7.1.private.pem"
+  "src/7. Schemi di firma digitale/7.1.signature.p7s"
 )
 
 for file in "${file_list[@]}"; do

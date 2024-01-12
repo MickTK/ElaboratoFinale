@@ -1,4 +1,4 @@
-# Il seguente script simula un sistema di concessione permessi, permettendo ad un utente di richiedere dei permessi speciali ad un utente amministratore. Quest'ultimo può o meno concedere tali permessi.
+# Il seguente script simula un sistema di concessione permessi, permettendo a un utente di richiedere dei permessi speciali a un utente amministratore. Quest'ultimo può o meno concedere tali permessi.
 
 from Crypto.PublicKey import ECC
 from Crypto.Signature import DSS
@@ -18,7 +18,7 @@ class SuperUser:
       protection = 'PBKDF2WithHMAC-SHA1AndAES128-CBC'
     )
     self.public_key = key.public_key()
-  # Concessione permessi ad un utente semplice
+  # Concessione permessi a un utente semplice
   def _grant_permissions_to_user(self, operation_token, password):
     try:
       key = ECC.import_key(self._private_key, passphrase = password)
